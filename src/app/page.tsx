@@ -6,14 +6,13 @@ const clr = { cyan: "#22d3ee", green: "#06d6a0", purple: "#a78bfa", amber: "#f59
 const ff = { head: "'Outfit', sans-serif", code: "'Fira Code', monospace", body: "'DM Sans', sans-serif" };
 
 const codeStr = `import scirouter
-
 # Fold a protein in one line
 structure = scirouter.proteins.fold(
     "MVLSPADKTNVKAAWGKVGAHAGEYGAEAL",
     engine="esmfold"
 )
-print(structure.avg_plddt)  # \u2192 87.3
-print(structure.pdb[:50])   # \u2192 ATOM  1  N...`;
+print(structure.avg_plddt)  # → 87.3
+print(structure.pdb[:50])   # → ATOM  1  N...`;
 
 function useCounter(end: number, duration: number, inView: boolean) {
   const [val, setVal] = useState(0);
@@ -135,10 +134,10 @@ export default function Home() {
           Protein folding. Molecular docking. ADME prediction. Drug-likeness scoring. SciRouter gives researchers and AI agents instant API access to the tools that power modern drug discovery.
         </p>
         <div style={{ opacity: 0, animation: "fadeUp .7s ease forwards", animationDelay: "0.3s", display: "flex", gap: 16, position: "relative", zIndex: 1 }}>
-          <a href="#waitlist" onClick={smooth("waitlist")} style={{ fontFamily: ff.body, fontSize: 15, fontWeight: 600, color: "#020405", background: "linear-gradient(135deg, #22d3ee, #06d6a0)", padding: "14px 32px", borderRadius: 10, textDecoration: "none" }}>Start Free \u2192</a>
+          <a href="#waitlist" onClick={smooth("waitlist")} style={{ fontFamily: ff.body, fontSize: 15, fontWeight: 600, color: "#020405", background: "linear-gradient(135deg, #22d3ee, #06d6a0)", padding: "14px 32px", borderRadius: 10, textDecoration: "none" }}>Start Free →</a>
           <a href="#pipeline" onClick={smooth("pipeline")} style={{ fontFamily: ff.body, fontSize: 15, fontWeight: 600, color: clr.text, background: "transparent", padding: "14px 32px", borderRadius: 10, textDecoration: "none", border: "1px solid #1a2535" }}>See the Pipeline</a>
         </div>
-        <p style={{ opacity: 0, animation: "fadeUp .7s ease forwards", animationDelay: "0.4s", fontFamily: ff.code, fontSize: 12, color: clr.dim, marginTop: 24, position: "relative", zIndex: 1 }}>500 free credits/month \u00b7 No credit card required \u00b7 MCP + OpenAI compatible</p>
+        <p style={{ opacity: 0, animation: "fadeUp .7s ease forwards", animationDelay: "0.4s", fontFamily: ff.code, fontSize: 12, color: clr.dim, marginTop: 24, position: "relative", zIndex: 1 }}>500 free credits/month · No credit card required · MCP + OpenAI compatible</p>
       </section>
       {/* SOCIAL PROOF */}
       <div ref={statsRef} style={{ borderTop: `1px solid ${clr.rule}`, borderBottom: `1px solid ${clr.rule}`, background: clr.darkBg, padding: "28px 32px", display: "flex", justifyContent: "center", gap: 60, flexWrap: "wrap" }}>
@@ -170,7 +169,7 @@ export default function Home() {
             <span style={{ fontFamily: ff.code, fontSize: 12, color: clr.dim, marginLeft: "auto" }}>example.py</span>
           </div>
           <pre style={{ fontFamily: ff.code, fontSize: 13, color: "#6b8098", padding: "20px 18px", margin: 0, lineHeight: 1.7, minHeight: 220, whiteSpace: "pre-wrap", wordBreak: "break-all" }}>
-            {typed}<span style={{ color: clr.cyan, opacity: showCursor ? 1 : 0, transition: "opacity 0.1s" }}>\u258c</span>
+            {typed}<span style={{ color: clr.cyan, opacity: showCursor ? 1 : 0, transition: "opacity 0.1s" }}>▌</span>
           </pre>
         </div>
       </section>
@@ -213,7 +212,7 @@ export default function Home() {
           ))}
         </div>
         <div style={{ textAlign: "center", marginTop: 48 }}>
-          <span style={{ fontFamily: ff.code, fontSize: 13, color: clr.dim, background: bg.card, border: `1px solid ${bg.border}`, borderRadius: 10, padding: "16px 24px", display: "inline-block" }}>Full pipeline: ~2.5 minutes \u00b7 ~50 credits ($0.50) \u00b7 Real scientific results</span>
+          <span style={{ fontFamily: ff.code, fontSize: 13, color: clr.dim, background: bg.card, border: `1px solid ${bg.border}`, borderRadius: 10, padding: "16px 24px", display: "inline-block" }}>Full pipeline: ~2.5 minutes · ~50 credits ($0.50) · Real scientific results</span>
         </div>
       </section>
 
@@ -239,12 +238,12 @@ export default function Home() {
             ))}
           </div>
           <div style={{ background: bg.card, border: `1px solid ${bg.border}`, borderRadius: 14, padding: 24, boxShadow: "0 24px 80px rgba(0,0,0,0.4)" }}>
-            <div style={{ fontFamily: ff.code, fontSize: 12, color: clr.dim, marginBottom: 12 }}>Claude Desktop \u2014 MCP Session</div>
+            <div style={{ fontFamily: ff.code, fontSize: 12, color: clr.dim, marginBottom: 12 }}>Claude Desktop — MCP Session</div>
             <div style={{ fontFamily: ff.code, fontSize: 13, color: "#6b8098", lineHeight: 1.7 }}>
               <div style={{ color: clr.muted }}>User: What is the predicted structure of MVLSPADKTNVK?</div>
               <div style={{ marginTop: 12 }}><span style={{ color: clr.purple }}>Agent:</span> I will call <span style={{ color: clr.cyan }}>scirouter.proteins.fold()</span> with your sequence.</div>
               <div style={{ marginTop: 12, padding: 12, background: "#0a1018", borderRadius: 8, border: `1px solid ${bg.border}` }}>
-                <div style={{ color: clr.green }}>\u2713 Fold completed \u2014 pLDDT: 87.3</div>
+                <div style={{ color: clr.green }}>✓ Fold completed — pLDDT: 87.3</div>
                 <div style={{ color: clr.dim, marginTop: 4 }}>Structure has high confidence. The N-terminal helix is well-resolved.</div>
               </div>
               <div style={{ marginTop: 12, color: clr.cyan }}>{"// Zero integration code. Just MCP."}</div>
@@ -264,7 +263,7 @@ export default function Home() {
               <div style={{ fontFamily: ff.head, fontSize: 36, fontWeight: 800, color: clr.text }}>{t.price}<span style={{ fontSize: 14, fontWeight: 400, color: clr.dim }}>{t.sub}</span></div>
               <div style={{ fontFamily: ff.code, fontSize: 12, color: clr.dim, marginBottom: 24, marginTop: 4 }}>{t.credits}</div>
               {t.features.map((f) => (
-                <div key={f} style={{ fontFamily: ff.body, fontSize: 13, color: clr.muted, padding: "6px 0", borderBottom: `1px solid ${bg.border}` }}>\u2713 {f}</div>
+                <div key={f} style={{ fontFamily: ff.body, fontSize: 13, color: clr.muted, padding: "6px 0", borderBottom: `1px solid ${bg.border}` }}>✓ {f}</div>
               ))}
               <a href="#waitlist" onClick={smooth("waitlist")} style={{ display: "block", textAlign: "center", marginTop: 24, fontFamily: ff.body, fontSize: 14, fontWeight: 600, padding: "12px 0", borderRadius: 8, textDecoration: "none", color: t.popular ? "#020405" : clr.text, background: t.popular ? "linear-gradient(135deg, #22d3ee, #06d6a0)" : "transparent", border: t.popular ? "none" : "1px solid #1a2535" }}>{t.name === "Enterprise" ? "Contact Sales" : "Get Started"}</a>
             </div>
@@ -280,9 +279,9 @@ export default function Home() {
           <p style={{ fontFamily: ff.body, fontSize: 16, color: clr.muted, marginBottom: 32, position: "relative" }}>Get your API key and 500 free credits. No credit card needed.</p>
           <div style={{ display: "flex", gap: 12, maxWidth: 480, margin: "0 auto", position: "relative" }}>
             <input type="email" placeholder="you@lab.edu" style={{ flex: 1, fontFamily: ff.body, fontSize: 15, color: clr.text, background: bg.card, border: `1px solid ${bg.border}`, borderRadius: 10, padding: "14px 18px", outline: "none" }} />
-            <button style={{ fontFamily: ff.body, fontSize: 15, fontWeight: 600, color: "#020405", background: "linear-gradient(135deg, #22d3ee, #06d6a0)", border: "none", borderRadius: 10, padding: "14px 28px", cursor: "pointer", whiteSpace: "nowrap" }}>Get API Key \u2192</button>
+            <button style={{ fontFamily: ff.body, fontSize: 15, fontWeight: 600, color: "#020405", background: "linear-gradient(135deg, #22d3ee, #06d6a0)", border: "none", borderRadius: 10, padding: "14px 28px", cursor: "pointer", whiteSpace: "nowrap" }}>Get API Key →</button>
           </div>
-          <p style={{ fontFamily: ff.code, fontSize: 12, color: clr.dim, marginTop: 16, position: "relative" }}>Free tier includes all 6 models \u00b7 500 credits/month \u00b7 SDK + MCP + REST</p>
+          <p style={{ fontFamily: ff.code, fontSize: 12, color: clr.dim, marginTop: 16, position: "relative" }}>Free tier includes all 6 models · 500 credits/month · SDK + MCP + REST</p>
         </div>
       </section>
       {/* FOOTER */}
@@ -309,7 +308,7 @@ export default function Home() {
           ))}
         </div>
         <div style={{ maxWidth: 1100, margin: "48px auto 0", paddingTop: 24, borderTop: `1px solid ${clr.rule}`, display: "flex", justifyContent: "space-between", alignItems: "center" }}>
-          <span style={{ fontFamily: ff.code, fontSize: 11, color: "#1a2535" }}>\u00a9 2026 SciRouter. All rights reserved.</span>
+          <span style={{ fontFamily: ff.code, fontSize: 11, color: "#1a2535" }}>© 2026 SciRouter. All rights reserved.</span>
           <span style={{ fontFamily: ff.code, fontSize: 11, color: "#1a2535" }}>NVIDIA builds the engines. We build the highway.</span>
         </div>
       </footer>
